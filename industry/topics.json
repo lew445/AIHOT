@@ -9,7 +9,7 @@
     {
       "key": "field",
       "name": "技术方向",
-      "blurb": "按器械赛道深挖：手术机器人、医学影像、体外诊断……"
+      "blurb": "按器械赛道深挖：冠脉介入、结构心脏病、电生理……"
     },
     {
       "key": "genre",
@@ -43,7 +43,7 @@
       "entityId": "microport",
       "tags": ["微创医疗", "entity:microport"],
       "definition": "微创医疗及其子公司的动态：心血管介入、骨科、手术机器人等业务的获批、融资与经营进展。",
-      "related": ["cardio", "surgical-robot", "orthopedics"]
+      "related": ["structural-heart", "electrophysiology", "cardio", "surgical-robot"]
     },
     {
       "slug": "intuitive",
@@ -61,7 +61,7 @@
       "entityId": "medtronic",
       "tags": ["美敦力", "entity:medtronic"],
       "definition": "美敦力的器械动态：心血管、神经调控、糖尿病与手术机器人的获批、召回与经营进展。",
-      "related": ["cardio", "abbott", "recalls"]
+      "related": ["cardio", "crm", "abbott", "recalls"]
     },
     {
       "slug": "jnj",
@@ -79,7 +79,7 @@
       "entityId": "abbott",
       "tags": ["雅培", "entity:abbott"],
       "definition": "雅培的器械动态：体外诊断、心血管介入、电生理与营养业务的获批、召回与经营进展。",
-      "related": ["ivd", "cardio", "medtronic"]
+      "related": ["ivd", "electrophysiology", "cardio", "medtronic"]
     },
     {
       "slug": "boston-scientific",
@@ -88,7 +88,7 @@
       "entityId": "boston-scientific",
       "tags": ["波士顿科学", "entity:boston-scientific"],
       "definition": "波士顿科学的动态：电生理、介入心脏、内窥镜与泌尿业务的获批、并购与竞争格局。",
-      "related": ["cardio", "endoscopy", "medtronic"]
+      "related": ["electrophysiology", "cardio", "endoscopy"]
     },
     {
       "slug": "siemens-healthineers",
@@ -161,11 +161,43 @@
     },
     {
       "slug": "cardio",
-      "name": "心血管介入",
+      "name": "冠脉介入",
       "group": "field",
-      "tags": ["心血管介入"],
-      "definition": "支架、瓣膜、电生理与封堵器等心血管介入器械的技术进展、获批、临床与集采动态。",
-      "related": ["microport", "medtronic", "boston-scientific"]
+      "tags": ["冠脉介入"],
+      "definition": "冠脉支架、球囊、指引导管与腔内影像等功能性冠脉介入器械的技术进展、获批、临床与集采动态。",
+      "related": ["structural-heart", "peripheral", "microport"]
+    },
+    {
+      "slug": "structural-heart",
+      "name": "结构心脏病",
+      "group": "field",
+      "tags": ["结构心脏病"],
+      "definition": "TAVR、瓣膜修复、封堵器与左心耳等结构心脏病器械的技术进展、获批、临床与集采动态。",
+      "related": ["cardio", "microport", "medtronic"]
+    },
+    {
+      "slug": "electrophysiology",
+      "name": "电生理",
+      "group": "field",
+      "tags": ["电生理"],
+      "definition": "三维标测、射频与冷冻消融、脉冲电场消融及磁导航等电生理器械的技术进展、获批与临床动态。",
+      "related": ["cardio", "boston-scientific", "abbott"]
+    },
+    {
+      "slug": "peripheral",
+      "name": "外周介入",
+      "group": "field",
+      "tags": ["外周介入"],
+      "definition": "外周血管与主动脉支架、球囊、血栓清除等外周与血管介入器械的技术进展、获批与集采动态。",
+      "related": ["cardio", "microport", "medtronic"]
+    },
+    {
+      "slug": "crm",
+      "name": "心律管理",
+      "group": "field",
+      "tags": ["心律管理"],
+      "definition": "起搏器、ICD、CRT 等心律管理植入器械与诊断方案的技术进展、获批与临床动态。",
+      "related": ["cardio", "medtronic", "abbott"]
     },
     {
       "slug": "orthopedics",
@@ -176,12 +208,20 @@
       "related": ["jnj", "stryker", "surgical-robot"]
     },
     {
-      "slug": "neuro-bci",
-      "name": "神经与脑机接口",
+      "slug": "neuro-intervention",
+      "name": "神经介入",
       "group": "field",
-      "tags": ["神经与脑机接口"],
-      "definition": "神经调控、脑机接口与神经介入器械的技术突破、临床试验与获批进展。",
-      "related": ["medtronic", "clinical", "materials"]
+      "tags": ["神经介入"],
+      "definition": "颅内动脉瘤、取栓、脑血管支架与神经调控等神经介入器械的技术突破、临床试验与获批进展。",
+      "related": ["medtronic", "microport", "clinical"]
+    },
+    {
+      "slug": "bci",
+      "name": "脑机接口",
+      "group": "field",
+      "tags": ["脑机接口"],
+      "definition": "植入式与非植入式脑机接口、神经信号采集与解码的技术突破、临床试验与获批进展。",
+      "related": ["neuro-intervention", "medtronic", "clinical"]
     },
     {
       "slug": "ophthalmology",
@@ -198,14 +238,6 @@
       "tags": ["内窥镜"],
       "definition": "软性与硬性内窥镜、一次性内镜与内镜手术设备的技术进展、获批与市场格局。",
       "related": ["boston-scientific", "surgical-robot", "imaging"]
-    },
-    {
-      "slug": "consumables",
-      "name": "高值耗材",
-      "group": "field",
-      "tags": ["高值耗材"],
-      "definition": "血管介入、骨科、口腔等高值耗材的获批、集采与国产替代进程。",
-      "related": ["procurement", "cardio", "orthopedics"]
     },
     {
       "slug": "home-care",
@@ -245,7 +277,7 @@
       "group": "genre",
       "tags": ["集采/招采"],
       "definition": "高值耗材集中带量采购、医保支付与招投标政策对器械行业的影响记录。",
-      "related": ["policy", "consumables", "ivd"]
+      "related": ["policy", "cardio", "ivd"]
     },
     {
       "slug": "clinical",
@@ -253,7 +285,7 @@
       "group": "genre",
       "tags": ["临床/证据"],
       "definition": "器械临床试验、真实世界数据与循证评价的结果与争议。",
-      "related": ["approvals", "neuro-bci", "materials"]
+      "related": ["approvals", "neuro-intervention", "materials"]
     },
     {
       "slug": "recalls",
@@ -269,7 +301,7 @@
       "group": "genre",
       "tags": ["融资/商业"],
       "definition": "器械企业的融资、并购、IPO、财报与人事动态。",
-      "related": ["policy", "approvals", "consumables"]
+      "related": ["policy", "approvals", "orthopedics"]
     },
     {
       "slug": "standards",
